@@ -4,8 +4,12 @@
       <div class="row justify-content-center">
         <div class="col-md-12">
           <div class="card">
-            <div class="card-header text-center">Questo è</div>
-            <div class="card-body text-center">il footer</div>
+            <div class="card-body text-center">
+              Developed by
+              <a class="button-link" href="https://github.com/MarcoCusenza"
+                >Marco Cusenza</a
+              >
+            </div>
           </div>
         </div>
       </div>
@@ -22,5 +26,13 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss" scoped>
+.card {
+  background-color: rgb(255, 113, 91);
+  color: #ffffff;
+  border-radius: 10px;
+  .card-body {
+    border-radius: 10px;
+  }
+}
 </style>
