@@ -2035,6 +2035,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Main",
   data: function data() {
@@ -2103,7 +2111,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".card[data-v-b9c20fb8] {\n  border: none;\n  border-radius: 10px;\n}\n.card .card-body[data-v-b9c20fb8] {\n  display: grid;\n  grid-template: 1fr/repeat(2, 1fr);\n  gap: 30px 40px;\n  padding: 60px;\n  border-radius: 10px;\n  background-color: #1ea896;\n}\n.card .card-body .post-box[data-v-b9c20fb8] {\n  background-color: #524848;\n  border-radius: 10px;\n  color: #ffffff;\n  padding: 30px;\n}", ""]);
+exports.push([module.i, ".card[data-v-b9c20fb8] {\n  border: none;\n  border-radius: 10px;\n}\n.card .card-body[data-v-b9c20fb8] {\n  display: grid;\n  grid-template: 1fr/repeat(2, 1fr);\n  gap: 30px 40px;\n  padding: 60px;\n  border-radius: 10px;\n  background-color: #1ea896;\n}\n.card .card-body .post-box[data-v-b9c20fb8] {\n  background-color: #524848;\n  border-radius: 10px;\n  color: #ffffff;\n  padding: 30px;\n}\n.card .card-body .post-box img[data-v-b9c20fb8] {\n  width: 100%;\n}", ""]);
 
 // exports
 
@@ -3471,6 +3479,17 @@ var render = function () {
               _vm._l(_vm.posts, function (post) {
                 return _c("div", { key: post.id, staticClass: "post-box" }, [
                   _c("h4", [_vm._v(_vm._s(post.title))]),
+                  _vm._v(" "),
+                  post.image
+                    ? _c("img", {
+                        attrs: {
+                          src: post.image
+                            ? "storage/" + post.image
+                            : "https://via.placeholder.com/150",
+                          alt: post.title,
+                        },
+                      })
+                    : _vm._e(),
                   _vm._v(" "),
                   _c("p", [_vm._v(_vm._s(post.content))]),
                   _vm._v(" "),

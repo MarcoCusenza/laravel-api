@@ -7,7 +7,15 @@
             <div class="card-body">
               <div class="post-box" v-for="post in posts" :key="post.id">
                 <h4>{{ post.title }}</h4>
-                <!-- <img v-if="post.image" :src="post.image" :alt="post.title" /> -->
+                <img
+                  v-if="post.image"
+                  :src="
+                    post.image
+                      ? 'storage/' + post.image
+                      : 'https://via.placeholder.com/150'
+                  "
+                  :alt="post.title"
+                />
                 <p>{{ post.content }}</p>
                 <div>{{ post.category_id }}</div>
               </div>
@@ -53,6 +61,10 @@ export default {
       border-radius: 10px;
       color: #ffffff;
       padding: 30px;
+
+      img{
+        width:100%;
+      }
     }
   }
 }
